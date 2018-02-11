@@ -131,6 +131,7 @@ exports.seed = function(knex, Promise) {
         { name: 'Bow Charge Plus', description: 'Increases max bow charge level by one.', number_of_levels: 0 },
         { name: 'Punishing Draw', description: 'Adds a stun effect to draw attacks and slightly increases attack power.', number_of_levels: 0 },
         { name: 'Protective Polish', description: 'Weapon sharpness does not decrease for a set time after sharpening.', number_of_levels: 0 },
+        { name: 'Capture Master', description: 'High chance of increased capture rewards. (No effect when joining mid-quest.)', number_of_levels: 0 },
       ]);
     })
     .then(function() {

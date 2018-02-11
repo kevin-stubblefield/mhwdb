@@ -3,10 +3,10 @@ module.exports = {
         development: {
             client: 'postgresql',
             connection: {
-                host: process.env.DB_HOST,
-                user: process.env.DB_USER,
-                password: process.env.DB_PASS,
-                database: process.env.DB_DATABASE,
+                host: '127.0.0.1',
+                user: 'postgres',
+                password: '50v3rDB',
+                database: 'mhworld',
                 port: 5432
             }
         },
