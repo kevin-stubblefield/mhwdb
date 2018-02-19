@@ -1,0 +1,44 @@
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(224, 216, 216);
+    margin-bottom: 15px;
+    width: 250px;
+    transition: all 450ms;
+}
+
+.skill-card.is-open {
+    border: 2px solid rgb(128, 192, 126);
+    transition: all 450ms;
+}
+
+.skill-card .header,
+.skill-card .details {
+    padding: 5px;
+}
+
+.skill-card h3 {
+    margin: 2px 0;
+}
+
+.skill-card p {
+    margin: 2px 0;
+}
+
+.skill-card .details {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 400ms ease;
+}
+
+.skill-card .details.is-open {
+    max-height: 350px;
+    transition: max-height 350ms ease-in;
+}

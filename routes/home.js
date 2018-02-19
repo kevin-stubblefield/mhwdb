@@ -3,7 +3,7 @@ let router = express.Router();
 let db = require('../db');
 
 router.get('/', function(req, res) {
-    res.redirect('/skills');
+    res.sendFile('/public/index.html', { root: './' });
 });
 
 module.exports = router;
