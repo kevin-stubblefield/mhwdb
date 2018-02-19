@@ -8,4 +8,10 @@ router.get('/', async (req, res) => {
     res.json(index);
 });
 
+router.get('/calculator', async (req, res) => {
+    let data = await controller.getArmorWithSkills(req.query);
+
+    res.json(data);
+});
+
 module.exports = router;
