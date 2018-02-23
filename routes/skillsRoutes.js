@@ -8,8 +8,12 @@ router.get('/', async (req, res) => {
     res.json(index);
 });
 
-router.get('/calculator', async (req, res) => {
-    let data = await controller.getArmorWithSkills(req.query);
+router.get('/calculate', async (req, res) => {
+    let skills = [];
+    // skills.push(req.query.skill);
+    // let data = await controller.getArmorWithSkills(skills);
+
+    let data = await controller.getSkillArmorGraph(req.cache);
 
     res.json(data);
 });

@@ -86,7 +86,7 @@ var app = new Vue({
             queryString = queryString.slice(0, -1);
             console.log(queryString);
 
-            axios.get('/skills/calculator' + queryString)
+            axios.get('/skills/calculate' + queryString)
             .then(function(response) {
                 console.log(response.data);
             });

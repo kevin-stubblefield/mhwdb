@@ -1,4 +1,25 @@
 let db = require('../db');
+let SkillArmorGraph = require('../models/skillArmorGraph');
+
+let getSkillArmorGraph = async function(cache) {
+    let skillArmorGraph = cache.get('skillArmorGraph');
+
+    if (!skillArmorGraph) {
+        skillArmorGraph = await generateSkillArmorGraph();
+    }
+
+    return skillArmorGraph;
+}
+
+let generateSkillArmorGraph = async function() {
+    let data = {};
+    data.armors = await db.armors.getAll();
+    var skillArmorGraph = new SkillArmorGraph();
+    skillArmorGraph.build(data);
+    return new Promise(function(resolve, reject) {
+        resolve(skillArmorGraph);
+    });
+}
 
 module.exports = {
     getIndex: async function() {
@@ -6,13 +27,5 @@ module.exports = {
         return skills;
     },
 
-    getArmorWithSkills: async function(skills) {
-        for (let key in skills) {
-            let skill = skills[key];
-            let parts = skill.split('-');
-            let skillId = parseInt(parts[0]);
-            let skillLevel = parseInt(parts[1]);
-            console.log(`SKILL: ${skillId}, LEVEL: ${skillLevel}`);
-        }
-    }
+    getSkillArmorGraph: getSkillArmorGraph
 }
