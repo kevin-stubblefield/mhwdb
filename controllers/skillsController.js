@@ -66,6 +66,7 @@ let getSkillArmorGraph = async function(cache) {
 let generateSkillArmorGraph = async function() {
     let data = {};
     data.armors = await db.armors.getAll();
+    data.charms = await db.charms.getAll();
     let skillArmorGraph = new SkillArmorGraph();
     skillArmorGraph.build(data);
     return new Promise(function(resolve, reject) {

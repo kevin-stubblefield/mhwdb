@@ -40,6 +40,16 @@ class SkillArmorGraph {
             if (currentArmor.skill2 === 1) continue;
             this.insertNode(currentArmor.skill2, currentArmor.id, currentArmor.skill2Points, currentArmor.piece);
         }
+
+        for (let i = 1; i < data.charms.length; i++) {
+            let currentCharm = data.charms[i];
+
+            if (currentCharm.skill1 === 1) continue;
+            this.insertCharmNodes(currentCharm.skill1, currentCharm.id, currentCharm.maxLevel);
+
+            if (currentCharm.skill2 === 1) continue;
+            this.insertCharmNodes(currentCharm.skill2, currentCharm.id, currentCharm.maxLevel);
+        }
     }
 
     insertNode(key, id, points, piece) {
@@ -55,6 +65,12 @@ class SkillArmorGraph {
                 currentNode = currentNode.nextNode;
             }
             currentNode.nextNode = new SkillArmorGraphNode(id, points, piece);
+        }
+    }
+
+    insertCharmNodes(key, id, maxLevel) {
+        for (let i = 1; i <= maxLevel; i++) {
+            this.insertNode(key, id, i, 5);
         }
     }
 }

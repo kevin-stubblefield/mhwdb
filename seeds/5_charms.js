@@ -5,6 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('charms').insert([
+        { name: 'Null Charm', rarity: 0, max_level: 0, skill_1: 1 },
         { name: 'Poison Charm', rarity: 3, max_level: 3, skill_1: 2 },
         { name: 'Attack Charm', rarity: 3, max_level: 3, skill_1: 16 },
         { name: 'Defense Charm', rarity: 3, max_level: 3, skill_1: 17 },

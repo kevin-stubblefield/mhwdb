@@ -11,14 +11,14 @@ router.get('/', async (req, res) => {
 router.get('/calculate', async (req, res) => {
     // let data = await controller.getArmorWithSkills(skills);
 
-    // let data = await controller.getSkillArmorGraph(req.cache);
+    let data = await controller.getSkillArmorGraph(req.cache);
     let skills = [];
     if (typeof req.query.skill === 'string') {
         skills.push(req.query.skill);
     } else {
         skills = req.query.skill;
     }
-    let data = await controller.calculateArmorWithDesiredSkills(skills, req.cache);
+    // let data = await controller.calculateArmorWithDesiredSkills(skills, req.cache);
 
     res.json(data);
 });
