@@ -132,6 +132,8 @@ exports.seed = function(knex, Promise) {
         { name: 'Punishing Draw', description: 'Adds a stun effect to draw attacks and slightly increases attack power.', number_of_levels: 0 },
         { name: 'Protective Polish', description: 'Weapon sharpness does not decrease for a set time after sharpening.', number_of_levels: 0 },
         { name: 'Capture Master', description: 'High chance of increased capture rewards. (No effect when joining mid-quest.)', number_of_levels: 0 },
+        { name: 'Resentment', description: 'Increases attack when you have recoverable damage (the red portion of your health gauge).', number_of_levels: 5 },
+        { name: 'Normal Shots', description: 'Increases the attack power of normal ammo and normal arrows.', number_of_levels: 1 },
       ]);
     })
     .then(function() {
@@ -439,6 +441,12 @@ exports.seed = function(knex, Promise) {
             { skill_id: 106, level: 2, description: 'Highly discourages monsters from engaging you even if you\'ve been spotted' },
             { skill_id: 106, level: 3, description: 'Prevents monsters from engaging you even if you\'ve been spotted.' },
             { skill_id: 107, level: 1, description: 'Makes it easier to cook well-done steaks.' },
+            { skill_id: 128, level: 1, description: 'While active, grants attack +5.' },
+            { skill_id: 128, level: 2, description: 'While active, grants attack +10.' },
+            { skill_id: 128, level: 3, description: 'While active, grants attack +15.' },
+            { skill_id: 128, level: 4, description: 'While active, grants attack +20.' },
+            { skill_id: 128, level: 5, description: 'While active, grants attack +25.' },
+            { skill_id: 129, level: 1, description: 'Increases the power of normal ammo and normal arrows.' },
           ]);
         });
     });

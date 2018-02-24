@@ -185,6 +185,14 @@ exports.seed = function(knex, Promise) {
         { name: 'Xeno\'jiiva ß', description: 'This Xeno\'jiiva armor hums with energy. If properly controlled, it grants the wearer vast power.', rank: 1, head: 564, chest: 565, hands: 566, waist: 567, legs: 568, set_bonus_name: 'Xeno\'jiiva Divinity', set_bonus_1_id: 121, set_bonus_1_count: 3 },
 
         { name: 'Dragonking α', description: 'Put this baby on to double your manliness instantly. Ideal for the grittier guys and gals.', rank: 1, head: 569, chest: 1, hands: 1, waist: 1, legs: 1 },
+
+        { name: 'Diablos Nero α', description: 'Brutal-looking armor made from Black Diablos parts. So imposing none so much as dare approach it.', rank: 1, head: 570, chest: 571, hands: 572, waist: 573, legs: 574, set_bonus_name: 'Diablos Mastery', set_bonus_1_id: 115, set_bonus_1_count: 2, set_bonus_2_id: 116, set_bonus_2_count: 4 },
+        { name: 'Diablos Nero ß', description: 'Brutal-looking armor made from Black Diablos parts. So imposing none so much as dare approach it.', rank: 1, head: 575, chest: 576, hands: 577, waist: 578, legs: 579, set_bonus_name: 'Diablos Mastery', set_bonus_1_id: 115, set_bonus_1_count: 2, set_bonus_2_id: 116, set_bonus_2_count: 4 },
+
+        { name: 'Brigade α', description: 'Guild-exclusive armor for Arena champions. A particularly refined headpiece.', rank: 1, head: 580, chest: 581, hands: 582, waist: 583, legs: 584 },
+        { name: 'Brigade ß', description: 'Guild-exclusive armor for Arena champions. A particularly refined headpiece.', rank: 1, head: 585, chest: 586, hands: 587, waist: 588, legs: 589 },
+
+        { name: 'Brigade', description: 'Guild-exclusive armor for Arena champions. A particularly refined headpiece.', rank: 0, head: 590, chest: 591, hands: 592, waist: 593, legs: 594 },
       ]);
     });
 };
